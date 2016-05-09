@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:jaytang="http://schemas.android.com/apk/res/com.example.safephone"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/texttile"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#cdc9a5"
+        android:gravity="center"
+        android:text="设置中心"
+        android:textSize="25dp" />
+
+<!--     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="自动更新"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/setting_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="自动更新关闭"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/setting_check1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/darker_gray" />
+ -->
+    <com.example.safephone.view.SettingView
+        jaytang:setting_title="自动升级"
+        jaytang:des_on="自动升级开启"
+        jaytang:des_off="自动升级关闭"
+        android:id="@+id/update2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.example.safephone.view.SettingView>
+    
+  <com.example.safephone.view.SettingView
+        jaytang:setting_title="软件锁"
+        jaytang:des_on="软件锁开启"
+        jaytang:des_off="软件锁关闭"
+        android:id="@+id/update3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.example.safephone.view.SettingView>
+    
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:jaytang="http://schemas.android.com/apk/res/com.example.safephone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <!--  <TextView
+        style="@style/TitleBarStyle"
+        android:text="2 手机卡绑定" /> -->
+ <include layout="@layout/tilte_bar"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通过绑定SIM卡："
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更换SIM卡发送报警信息："
+        android:textSize="18sp" />
+      <com.example.safephone.view.SettingView
+        jaytang:setting_title="点击更换SIM卡"
+        jaytang:des_on="sim绑定"
+        jaytang:des_off="sim未绑定"
+        android:id="@+id/update4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.example.safephone.view.SettingView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/presence1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:src="@android:drawable/presence_invisible" 
+            />
+
+        <ImageView
+            android:id="@+id/presence2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:src="@android:drawable/presence_online"
+           />
+
+        <ImageView
+            android:id="@+id/presence3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible" />
+
+        <ImageView
+            android:id="@+id/presence4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible" />
+    </LinearLayout>
+    
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bind" />
+
+        <Button
+            android:id="@+id/pre_btn" 
+            style="@style/backButton"
+            />
+        <Button
+            android:id="@+id/next_btn"
+       style="@style/nextButton"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

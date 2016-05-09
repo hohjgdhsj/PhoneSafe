@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jaytang="http://schemas.android.com/apk/res/com.example.safephone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<!-- 
+    <TextView
+        style="@style/TitleBarStyle"
+        android:text="3 设置安全号码" /> -->
+ <include layout="@layout/tilte_bar"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIM卡变更后\n短信给报警安全号码"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="安全号码"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/choose_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="selectcontact"
+        android:clickable="true"
+        android:text="选择联系人"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@drawable/select_contact_slector" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/presence1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                 android:src="@android:drawable/presence_invisible" 
+           />
+
+        <ImageView
+            android:id="@+id/presence2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible" />
+
+        <ImageView
+            android:id="@+id/presence3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:src="@android:drawable/presence_online" />
+
+        <ImageView
+            android:id="@+id/presence4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/phone" />
+
+        <Button 
+            android:id="@+id/pre_btn"
+            style="@style/backButton" />
+
+        <Button 
+            android:id="@+id/next_btn"
+            style="@style/nextButton" />
+    </RelativeLayout>
+
+</LinearLayout>
