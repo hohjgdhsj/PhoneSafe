@@ -28,12 +28,16 @@ public class SmsReceiver extends BroadcastReceiver {
 			System.out.println("号码" + number + "内容" + content);
 if("#*location*#".equals(content)){
 	ToastUtils.show(context, "GPS跟踪定位");
+	abortBroadcast();//截断广播
 }else if("#*alarm*#".equals(content)){
 	ToastUtils.show(context, "播放报警音乐");
+	abortBroadcast();//截断广播
 }else if("#*wipe*#".equals(content)){
 	ToastUtils.show(context, "远程擦除数据");
+	abortBroadcast();//截断广播
 }else if("#*lockscreen*#".equals(content)){
 	ToastUtils.show(context, "远程锁屏");
+	abortBroadcast();//截断广播
 }
 			
 			
