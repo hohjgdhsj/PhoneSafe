@@ -69,6 +69,21 @@
             android:name=".SettingActivity"
             android:label="@string/app_name" >
         </activity>
+             <!-- 高级工具界面 -->
+        <activity
+            android:name=".AdvacedToolsActivity"
+            android:label="@string/app_name" >
+        </activity>
+             <!-- 火箭界面 -->
+        <activity
+            android:name=".RocketActivity"
+            android:label="@string/app_name" >
+        </activity>
+           <!-- 通信 -->
+        <activity
+            android:name=".CallAndSmsActivity"
+            android:label="@string/app_name" >
+        </activity>
         <!-- 找寻手机的界面 -->
         <activity
             android:name=".LostFindActivity"
@@ -103,14 +118,32 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name=".receiver.MyAdminReceiver.java"
+            android:description="@string/app_name"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
         <!-- 接受短信广播的接收器 -->
         <receiver android:name=".receiver.SmsReceiver" >
 
-            <!-- 有序广播 ，有一定的优先级-->
-            <intent-filter android:priority="1000">
+            <!-- 有序广播 ，有一定的优先级 -->
+            <intent-filter android:priority="1000" >
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
+
+        <service android:name="com.example.safephone.service.GpsService" >
+        </service>
+           <service android:name="com.example.safephone.service.AddressService" >
+        </service>
         <!-- 添加测试类库 -->
         <uses-library android:name="android.test.runner" />
     </application>

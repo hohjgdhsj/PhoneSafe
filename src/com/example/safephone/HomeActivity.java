@@ -62,7 +62,7 @@ public class HomeActivity extends Activity {
 					}
 					break;
 				case 1:// 通信卫士
-					intent.setClass(getApplicationContext(), SettingActivity.class);
+					intent.setClass(getApplicationContext(), CallAndSmsActivity.class);
 					startActivity(intent);
 					break;
 				case 2:// 软件管家
@@ -86,7 +86,7 @@ public class HomeActivity extends Activity {
 					startActivity(intent);
 					break;
 				case 7:// 高级工具
-					intent.setClass(getApplicationContext(), SettingActivity.class);
+					intent.setClass(getApplicationContext(), AdvacedToolsActivity.class);
 					startActivity(intent);
 					break;
 				case 8:// 设置中心

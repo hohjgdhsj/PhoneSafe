@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 加入命名空间 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jaytang="http://schemas.android.com/apk/res/com.example.safephone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通过绑定SIM卡："
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更换SIM卡发送报警信息："
+        android:textSize="18sp" />
+
+    <com.example.safephone.view.SettingView
+        android:id="@+id/update4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        jaytang:des_off="sim未绑定"
+        jaytang:des_on="sim绑定"
+        jaytang:setting_title="点击更换SIM卡" >
+    </com.example.safephone.view.SettingView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bind" />
+    </RelativeLayout>
+
+</LinearLayout>

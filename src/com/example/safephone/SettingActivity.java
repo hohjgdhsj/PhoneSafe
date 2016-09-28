@@ -1,6 +1,7 @@
 package com.example.safephone;
 
 import com.example.safephone.utils.CacheUtils;
+import com.example.safephone.utils.Serviceutils;
 import com.example.safephone.view.SettingView;
 
 import android.app.Activity;
@@ -27,6 +28,7 @@ public class SettingActivity extends Activity {
 		settingview = (SettingView) findViewById(R.id.update2);
 		settingview2 = (SettingView) findViewById(R.id.update3);
 		 diyinitview();
+		boolean Serviceatste=Serviceutils.isServiceRunning(context);
 	}
 
 	private void diyinitview() {
